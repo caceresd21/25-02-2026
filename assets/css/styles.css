@@ -1,0 +1,412 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Intro Screen */
+.intro-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.intro-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 20px;
+}
+
+/* Header tipo reproductor */
+.music-header {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.music-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+/* Texto inicial */
+.intro-text {
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'Parisienne', cursive !important;
+    
+    font-size: 2rem;
+    line-height: 1.3;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+    color: #ffffff;
+}
+
+.intro-text p {
+    word-spacing: 2px;
+}
+
+/* Sección */
+.carousel-section {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+/* Tarjeta elegante */
+/* Tarjeta efecto vidrio */
+.carousel {
+    width: 240px;
+    height: 320px;
+    padding: 12px 12px 40px 12px;
+    border-radius: 20px;
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Área de imagen */
+.carousel img {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: 270px;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    filter: brightness(0.35); /* 🔥 oscurece */
+}
+
+/* Imagen visible */
+.carousel img.active {
+    opacity: 1;
+}
+
+/* Texto abajo */
+.carousel::after {
+    content: "Instantes Nuestros 💞";
+    position: absolute;
+    bottom: 2px; /* antes estaba en 10px */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+}
+/* Carta */
+/* Sección carta */
+.letter-section {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+/* Carta estilo pergamino elegante */
+/* Carta pergamino suave */
+.letter {
+    width: 85%;
+    max-width: 340px;
+    padding: 32px 26px;
+
+    background: linear-gradient(
+        to bottom,
+        #f8f4ea,
+        #efe6d6
+    );
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(140, 125, 95, 0.25);
+
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.18),
+        inset 0 0 15px rgba(140,125,95,0.08);
+}
+
+/* Texto tipo tinta */
+.typing-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #2f2518; /* más oscuro tipo tinta */
+    letter-spacing: 0.3px;
+}
+
+
+/* Botón video */
+.video-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.video-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff4d6d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.video-button:hover {
+    transform: scale(1.1);
+    background: #ff1e4d;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+
+    .intro-content h1 {
+        font-size: 3rem;
+    }
+
+    .carousel {
+        max-width: 600px;
+        height: 400px;
+    }
+
+    .intro-text {
+        font-size: 1.5rem;
+    }
+}
+.player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cover {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.song-artist {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .intro-text {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        padding: 0 20px;
+    }
+}
+
+.music-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.player {
+    width: 90%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.cover {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.song-details {
+    flex: 1;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.song-artist {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.dedication {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Modal pantalla completa */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Video */
+.video-modal video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Botón cerrar */
+.close-video {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Contenedor de figuras */
+.floating-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Cada símbolo */
+.floating-symbol {
+    position: absolute;
+    top: -20px;
+    font-size: 18px;
+    animation: fall linear forwards;
+    opacity: 0.8;
+}
+
+/* Animación caída */
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* Capa de estrellas sutiles */
+/* Estrellas globales */
+.star-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 50% 40%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.6), transparent);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.intro-screen,
+.main-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 75% 85%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 95% 15%, rgba(255,255,255,0.6), transparent);
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    z-index: 1;
+}
+
+.main-content::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 75% 85%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 95% 15%, rgba(255,255,255,0.6), transparent);
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    z-index: 0;
+}

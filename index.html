@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25.02.2026 💙</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="star-layer"></div>
+    <!-- Pantalla inicial para activar música -->
+    <div class="intro-screen" id="intro">
+        <div class="intro-content">
+            <h1 class="date-title">25 · 02 · 2026 ✨💖</h1>            
+            <p>Toca la pantalla para comenzar</p>
+        </div>
+        
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source src="assets/audio/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+
+        <!-- Encabezado estilo reproductor -->
+        <header class="music-header">
+    <div class="player">
+        <img src="assets/images/cover.jpg" class="cover">
+
+        <div class="song-details">
+            <span class="song-title">Si Supieras</span>
+            <span class="song-artist">Kevin Kaarl</span>
+        </div>
+        <!-- Nuevo texto -->
+        <div class="dedication">
+            Para ti 🎶💙
+        </div>
+    </div>
+</header>
+
+        <!-- Texto corto -->
+        <section class="intro-text">
+    <p>
+        Si supieras lo que significas para mí…  
+        Desde aquel 25 · 11 · 2021💌 no solo empezó una historia,  
+        empezó mi lugar favorito en el mundo: tú.
+    </p>
+</section>
+
+        <!-- Carrusel -->
+        <section class="carousel-section">
+            <div class="carousel">
+                <img src="assets/images/foto1.jpg" class="active">
+                <img src="assets/images/foto2.jpg">
+                <img src="assets/images/foto3.jpg">
+                <img src="assets/images/foto4.jpg">
+                <img src="assets/images/foto5.jpg">
+                <img src="assets/images/foto6.jpg">
+                <img src="assets/images/foto7.jpg">
+                <img src="assets/images/foto8.jpg">
+                <img src="assets/images/foto9.jpg">
+                <img src="assets/images/foto10.jpg">
+                <img src="assets/images/foto11.jpg">
+                <img src="assets/images/foto12.jpg">
+                <img src="assets/images/foto13.jpg">
+                <img src="assets/images/foto14.jpg">
+            </div>
+        </section>
+
+        <!-- Carta -->
+        <section class="letter-section">
+            <div class="letter">
+                <p class="typing-text">
+    Hay fechas que se quedan en el calendario…  
+    y hay otras que se quedan en el alma.  
+
+    Desde aquel 25-11-2021 entendí que el amor no es solo una palabra,  
+    es una decisión diaria, un abrazo seguro,  
+    un “aquí estoy” incluso en los días difíciles.  
+
+    No prometo un camino perfecto,  
+    pero sí prometo caminarlo contigo.  
+
+    Y hoy, 25-02-2026,  
+    no solo te amo…  
+    te elijo, una y otra vez.
+</p>
+            </div>
+        </section>
+
+
+        <!-- Botón -->
+<section class="video-section">
+    <button class="video-button" onclick="openVideo()">
+        Ver el video 🎥
+    </button>
+</section>
+
+<!-- Modal de video -->
+<div class="video-modal" id="videoModal">
+    <span class="close-video" onclick="closeVideo()">✕</span>
+    <video id="loveVideo" controls>
+        <source src="assets/video/video.mp4" type="video/mp4">
+    </video>
+</div>
+
+    </div>
+<div class="floating-container"></div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
